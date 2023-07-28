@@ -1,5 +1,11 @@
 """"
-
+Overall Explanation:
+These commands use Scapy, a Python library for network packet manipulation, to perform an ARP (Address Resolution Protocol) scan. 
+The code creates an ARP request packet for the "10.0.2.1/24" subnet, combines it with an Ethernet broadcast packet, 
+sends the combined packet over the network, and captures the responses. 
+The answered_list variable stores the devices that responded to the ARP request, and unanswered_list stores the devices that did not respond. 
+The answered_list.summary() displays a summary of the responses, providing the MAC addresses of devices with 
+IP addresses in the "10.0.2.1/24" subnet. This can be helpful for network scanning and analysis purposes.
 """
 
 import scapy.all as scapy
